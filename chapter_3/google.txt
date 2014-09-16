@@ -1,0 +1,9 @@
+Google 跟 merge sort 相关面经
+https://www.google.com/#q=mitbbs+google+interview+mergesort
+
+http://www.mitbbs.com/bbsann2/life.faq/JobHunting/D13476000522s0/D13476011242s0/D13501136562O0/M.1351142009_2.W0/%E5%8F%91%E4%BA%9B%E6%94%B6%E9%9B%86%E5%88%B0%E7%9A%84Google%E7%9A%84%E9%9D%A2%E7%BB%8F
+http://www.mitbbs.com/article_t/JobHunting/31598671.html
+http://www.mitbbs.com/article/JobHunting/31601667_0.html
+http://courses.csail.mit.edu/iap/interview/Hacking_a_Google_Interview_Handout_2.pdf
+
+Facebook 跟 merge sort 相关面经
