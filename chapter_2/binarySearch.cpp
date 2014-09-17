@@ -21,21 +21,28 @@ public:
         int end = array.size()-1;
         int mid = 0;
         
-        while(start < end) {
-            int mid_idx = (start+end)/2;
-            int mid_ele = array(mid_idx);
-            if(mid_ele == target) {
-                return mid_idx;
+        while(start + 1 < end) {
+            mid = start + (end - start) / 2;
+            if(array[mid] == target) {
+	        end = mid;
+	    } else if(array[mid] < target) {
+                start = mid;
+            } else if(array[mid] > target) {
+                end = mid;
             }
-            else if(mid_ele < target) {
-                start = mid_idx;
-            }
-            else {
-                end = mid_idx;
-            }
-            
+        } // while
+ 
+        // when exit while loop, the remaining array has only two elements.
+        // the reason why we do array[start] == target first is because we want to output the first occurance of the index;
+        // in other words, if we want to find the last occurance, then we need to move array[end] == target first.
+        if(array[start] == target) {
+            return start;
+        }
+        if(array[end] == target) {
+            return end;
         }
         return -1;
+
     }
 };
 
