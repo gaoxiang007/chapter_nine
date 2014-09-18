@@ -1,0 +1,5 @@
+1.  in the Search in Rotated Sorted Array  , 
+http://answer.ninechapter.com/solutions/search-in-rotated-sorted-array/
+if (A[start] <= target && target <= A[mid]) {
+why is the equal sign necessary ?
+
