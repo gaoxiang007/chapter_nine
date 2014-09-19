@@ -3,3 +3,16 @@ http://answer.ninechapter.com/solutions/search-in-rotated-sorted-array/
 if (A[start] <= target && target <= A[mid]) {
 why is the equal sign necessary ?
 
+
+2. For 2d-matrix search questions, how to deal with the following scenarios
+2.1 M*N matrix 
+
+references:
+
+http://leetcode.com/2010/10/searching-2d-sorted-matrix.html
+
+http://leetcode.com/2010/10/searching-2d-sorted-matrix-part-ii.html
+
+http://leetcode.com/2010/10/searching-2d-sorted-matrix-part-iii.html
+
+http://stackoverflow.com/questions/2457792/given-a-2d-array-sorted-in-increasing-order-from-left-to-right-and-top-to-bottom 
