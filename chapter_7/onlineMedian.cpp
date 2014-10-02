@@ -10,6 +10,7 @@
 #include <iostream>
 #include <sstream>
 #include <queue>
+#include <string>
 using namespace std;
 
 
@@ -45,7 +46,10 @@ void onlineMedian(istringstream* sin) {
 
 int main(int argc, const char * argv[])
 {
-
+    string stringvalues = "3 7 6 10 12";
+    istringstream iss(stringvalues);
+    
+    onlineMedian(&iss);
     
     return 0;
 }
