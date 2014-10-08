@@ -71,7 +71,7 @@ public:
     }
 };
 
-// method 3:
+// method 3: divide & conquer
 
 class Solution {
 public:
@@ -79,7 +79,7 @@ public:
         if(root == NULL) {
             return true;
         }
-        if(root->val <= min || root->val >= max) {
+        if(root->val <= min || root->val >= max) { // 这里是否取等号可以和下面的isValidBSTHelper的第一个参数结合起来考虑
             return false;
         }
         bool left = isValidBSTHelper(root->left, min, root->val);
