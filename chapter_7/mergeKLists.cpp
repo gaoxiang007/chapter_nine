@@ -33,31 +33,55 @@ public:
 };
 
 
-// method 2
+// method 2 -- using Min-Heap
 
-#include <iostream>
-#include <queue>
-#include <vector>
-
-using namespace std;
-
-
-
-
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(NULL) {}
-};
-
-bool mycompare(ListNode left, ListNode right) {
-    return true;
-}
-
-
-ListNode *mergeKLists(vector<ListNode *> &lists) {
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode *mergeKLists(vector<ListNode *> &lists) {
+        if(lists.size() == 0) {
+            return NULL;
+        }
+        ListNode node(0);
+        ListNode* res = &node;
+        
+        // 维护一个k个大小的最小堆，初始化堆中元素为每个链表的头结点
+        priority_queue<ListNode*,vector<ListNode*>,mycomparison> heap; 
+        for(int i = 0; i < lists.size(); ++i) {
+            if(lists[i] != NULL) {
+                heap.push(lists[i]);
+            }
+        }
+        // 每次从堆中选择最小的元素加入到结果链表，再选择该最小元素所在链表的下一个节点加入到堆中
+        while(!heap.empty()) {
+            ListNode* cur = heap.top();
+            heap.pop();
+            res->next = cur;
+            res = cur;
+            // 改最小元素的下一个节点加入到堆中
+            if(cur->next) {
+                heap.push(cur->next);
+            }
+        }// while
+        
+        //这样当堆为空时，所有链表的节点都已经加入了结果链表
+        return node.next;
+        
+        
+    }
+private:
     
-    //priority_queue<ListNode, vector<ListNode>, mycompare> heap;
-    return NULL;
-}
-
+    struct mycomparison {
+        bool operator() (const ListNode* a, const ListNode* b) {
+            return a->val > b->val;
+        }
+    };
+    
+};
