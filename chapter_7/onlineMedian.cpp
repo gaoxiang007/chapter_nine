@@ -13,7 +13,7 @@
 #include <string>
 using namespace std;
 
-
+// C++ priority_queue的default comp 是 less(最大的元素在top)
 void onlineMedian(istringstream* sin) {
     priority_queue<int, vector<int>, greater<int> > right; // Min-heap - stores the bigger part of the stream
     priority_queue<int, vector<int>, less<int> > left; // Max-heap - stores the smaller part of the stream

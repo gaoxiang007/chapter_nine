@@ -27,3 +27,31 @@ public:
         return NULL;
     }
 };
+
+// version 2 -  10/09/2014
+
+class Solution {
+public:
+    char *strStr(char *haystack, char *needle) {
+        if(haystack == NULL || needle == NULL) {
+            return NULL;
+        }
+        int m = strlen(haystack);
+        int n = strlen(needle);
+        int i, j;
+        for(i = 0; i < m - n + 1; ++i) {
+            for(j = 0; j < n; ++j) {
+                if(needle[j] != haystack[i+j]) {
+                    break;
+                } else {
+                    continue;
+                }
+            }
+            if(j == n) {
+                return &haystack[i];
+            }
+        }
+        
+        return NULL;
+    }
+};
