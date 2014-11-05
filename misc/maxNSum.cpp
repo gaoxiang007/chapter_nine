@@ -8,6 +8,13 @@
 //  Copyright (c) 2014 Peter Liu. All rights reserved.
 //
 
+/*
+题目是：
+给A，B 2个array，里面都是integer，已经排好序了，由大到小，他们的长度都是N
+
+现在从A和B里各选出一个数，总成一个sum，请返回前N个最大的sum
+*/
+
 #include <iostream>
 #include <vector>
 #include <queue>
